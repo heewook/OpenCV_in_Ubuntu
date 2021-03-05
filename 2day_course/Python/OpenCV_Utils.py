@@ -509,6 +509,6 @@ def drawHoughCircles(image, circles):
     if circles is None:
         return result
     for i in circles[0,:]:
-        cv2.circle(result, (i[0],i[1]), i[2], (0, 255, 0), 2)
+        cv2.circle(result, (i[0],i[1]), int(i[2]), (0, 255, 0), 2)
         cv2.circle(result, (i[0],i[1]), 2, (0, 0, 255), -1)
     return result
